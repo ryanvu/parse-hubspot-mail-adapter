@@ -1,0 +1,23 @@
+{
+  "name": "parse-hubspot-mail-adapter",
+  "version": "1.0.0",
+  "description": "Used to send Parse Server emails through HubSpot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "parse",
+    "parse-server",
+    "email-adapter",
+    "hubspot"
+  ],
+  "author": "Ryan Vu",
+  "license": "ISC",
+  "dependencies": {
+    "@hubspot/api-client": "^8.3.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.31.0"
+  }
+}

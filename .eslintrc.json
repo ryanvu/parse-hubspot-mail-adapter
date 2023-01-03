@@ -1,0 +1,57 @@
+{
+    "env": {
+        "es2021": true,
+        "node": true
+    },
+    "extends": "eslint:recommended",
+    "ignorePatterns": [
+        "public/*"
+    ],
+    "overrides": [
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest"
+    },
+    "globals": {
+        "process": "readonly",
+        "Parse": "readonly",
+        "__": "readonly",
+        "__dirname": "readonly",
+        "AWS": "readonly",
+        "S3Adapter": "readonly"
+    },
+    "rules": {
+        "indent": [
+            "error",
+            2,
+            { "SwitchCase": 1 }
+        ],
+        "linebreak-style": [
+            "error",
+            "windows"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "jsdoc/newline-after-description": "off",
+        "max-len": ["error", {
+            "code": 200,
+            "ignoreComments": true,
+            "ignoreRegExpLiterals": true,
+            "ignoreStrings": true,
+            "ignoreTemplateLiterals": true,
+            "ignoreTrailingComments": true,
+            "ignoreUrls": true
+        }],
+        "no-trailing-spaces": ["error", {
+            "ignoreComments": true,
+            "skipBlankLines": true
+        }],
+        "no-underscore-dangle": "off",
+        "semi": [
+            "error",
+            "always"
+        ]
+    }
+}
