@@ -46,6 +46,9 @@ const server = ParseServer({
       // paths to point to your email html files
       verificationEmailFolder: './public/path/to/verificationEmails',
       passwordResetFolder: './public/path/to/passwordResetEmails',
+      // The name property of the Parse User you'd like to use ('firstName', 'name', 'username') 
+      // defaults to 'firstName' if no property is passed in
+      defaultNameProperty: 'firstName',
       // default language if a user does not have a preferred language
       defaultUserLanguage: 'en',
       // the name of the column of the user properties for language preferences

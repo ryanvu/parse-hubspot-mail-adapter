@@ -9,6 +9,7 @@ const SimpleHubSpotEmailAdapter = hubSpotOptions => {
   //Defaults
   hubSpotOptions.genericOnly         = hubSpotOptions.genericOnly || false;
   hubSpotOptions.defaultUserLanguage = hubSpotOptions.defaultUserLanguage || 'en';
+  hubSpotOptions.defaultNameProperty = hubSpotOptions.defaultNameProperty || 'firstName';
 
   const hubspotClient     = new Client({ accessToken: hubSpotOptions.accessToken });
 
@@ -31,7 +32,7 @@ const SimpleHubSpotEmailAdapter = hubSpotOptions => {
 
   const sendVerificationEmail = async (options) => {
     const to         = getRecipient(options.user);
-    const firstname  = options.user.get('firstName') || '';
+    const firstname  = options.user.get(hubSpotOptions.defaultNameProperty) || '';
     const link       = options.link;
     let emailOptions = {
       message:           { to },
@@ -60,7 +61,7 @@ const SimpleHubSpotEmailAdapter = hubSpotOptions => {
 
   const sendPasswordResetEmail = async (options) => {
     const to        = getRecipient(options.user);
-    const firstname = options.user.get('firstName') || '';
+    const firstname = options.user.get(hubSpotOptions.defaultNameProperty) || '';
     const link      = options.link;
     let emailOptions = {
       message:           { to },
