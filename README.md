@@ -34,6 +34,9 @@ const server = ParseServer({
     options: {
       // Your Access Token for HubSpot
       accessToken: 'your-hubspot-access-token',
+      // Used for modifying a custom subject line if genericOnly flag is used
+      // i.e. appName: 'app' --> Subject lines will be "app | Verify your email"
+      appName: 'Name of your app',
       // Your verification email ID
       verificationEmailId: 'email-id-for-verification-email',
       // Your Password Reset email ID
