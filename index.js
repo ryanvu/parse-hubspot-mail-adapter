@@ -46,7 +46,7 @@ const SimpleHubSpotEmailAdapter = hubSpotOptions => {
       const locale    = options.user.get(hubSpotOptions.userLanguagePropertyName) || hubSpotOptions.defaultUserLanguage;
       
       const email   = await fs.readFile(`${hubSpotOptions.verificationEmailFolder}/${locale}.html`, { encoding: 'utf-8' });
-      const subject = 'Email Verification';
+      const subject = `${hubSpotOptions.appName ? hubSpotOptions.appName + ' | ' : ''}Verify your email`;
       const body    = email.replaceAll(templateLink, link).replaceAll(templateFirstName, firstname);
   
       emailOptions = {
@@ -75,7 +75,7 @@ const SimpleHubSpotEmailAdapter = hubSpotOptions => {
       const locale    = options.user.get(hubSpotOptions.userLanguagePropertyName) || hubSpotOptions.defaultUserLanguage;
 
       const email   = await fs.readFile(`${hubSpotOptions.passwordResetFolder}/${locale}.html`, { encoding: 'utf-8' });
-      const subject = 'Reset your password';
+      const subject = `${hubSpotOptions.appName ? hubSpotOptions.appName + ' | ' : ''}Reset your password`;
       const body    = email.replaceAll(templateLink, link).replaceAll(templateFirstName, firstname);
 
       emailOptions = {
