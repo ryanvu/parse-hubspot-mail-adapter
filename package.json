@@ -1,6 +1,6 @@
 {
   "name": "parse-hubspot-mail-adapter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Used to send Parse Server emails through HubSpot",
   "main": "index.js",
   "scripts": {
