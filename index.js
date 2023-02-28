@@ -52,7 +52,7 @@ const SimpleHubSpotEmailAdapter = hubSpotOptions => {
       emailOptions = {
         message:           { to },
         customProperties:  { body, subject },
-        emailId:           parseInt(hubSpotOptions.genericEmailId)
+        emailId:           parseInt(hubSpotOptions.genericEmailId, 10)
       };
     }
   
@@ -81,7 +81,7 @@ const SimpleHubSpotEmailAdapter = hubSpotOptions => {
       emailOptions = {
         message:           { to },
         customProperties:  { body, subject },
-        emailId:           parseInt(hubSpotOptions.genericEmailId)
+        emailId:           parseInt(hubSpotOptions.genericEmailId, 10)
       };
     }
 
